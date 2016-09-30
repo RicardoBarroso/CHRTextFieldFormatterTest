@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "CHRTextFieldFormatter.h"
-#import "CHRTextFieldFormatter.h"
-#import "CHRPhoneNumberMask.h"
+#import "CHRBusinessEINNumberMask.h"
 #import "CHRCardNumberMask.h"
+#import "CHRPhoneNumberMask.h"
+#import "CHRTextFieldFormatter.h"
+#import "CHRTextFieldFormatter.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) IBOutlet UITextField *originalPhoneNumberTextField;
@@ -21,6 +22,7 @@
 
 @property (nonatomic, strong) CHRTextFieldFormatter *originalPhoneNumberFormatter;
 @property (nonatomic, strong) CHRTextFieldFormatter *originalCardNumberFormatter;
+@property (nonatomic, strong) CHRTextFieldFormatter *businessEINNumberFormatter;
 @end
 
 @implementation ViewController
@@ -30,10 +32,13 @@
     
     self.originalPhoneNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.originalPhoneNumberTextField mask:[CHRPhoneNumberMask new]];
     self.originalCardNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.originalCardNumberTextField mask:[CHRCardNumberMask new]];
+    self.businessEINNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.businessEINNumberTextField mask:[CHRBusinessEINNumberMask new]];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    if (textField == self.phoneNumberTextField) {
+    if (textField == self.businessEINNumberTextField) {
+        return [self.businessEINNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
+    } else if (textField == self.phoneNumberTextField) {
         return [self.originalPhoneNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
     } else if (textField == self.originalCardNumberTextField) {
         return [self.originalCardNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
