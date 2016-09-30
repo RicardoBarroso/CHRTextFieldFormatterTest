@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +18,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number (original)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UsZ-TY-xzs" userLabel="(original) Phone Number Text Field">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="V3Z-rT-v3w"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number (original)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rzP-nn-MGw" userLabel="(original) Card Number Text Field">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="pv2-uf-Zdh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5C8-Zz-mjP" userLabel="Phone Number Text Field">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ZG4-Cv-HsZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SSN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G0O-zx-1c0" userLabel="SSN Text Field">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BZh-Sx-4l4"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Business EIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHe-He-ZTr" userLabel="Business EIN Text Field">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="YBu-ZK-aUJ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5C8-Zz-mjP" firstAttribute="top" secondItem="rzP-nn-MGw" secondAttribute="bottom" constant="50" id="14t-vt-9O3"/>
+                            <constraint firstItem="UsZ-TY-xzs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="100" id="3cE-yn-2tl"/>
+                            <constraint firstItem="rzP-nn-MGw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3xf-y5-o0t"/>
+                            <constraint firstItem="5C8-Zz-mjP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FkY-c4-cw3"/>
+                            <constraint firstItem="G0O-zx-1c0" firstAttribute="centerX" secondItem="5C8-Zz-mjP" secondAttribute="centerX" id="KhG-D6-roe"/>
+                            <constraint firstItem="UsZ-TY-xzs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MIc-Hg-4XA"/>
+                            <constraint firstItem="eHe-He-ZTr" firstAttribute="top" secondItem="G0O-zx-1c0" secondAttribute="bottom" constant="20" id="Sht-Vl-6qs"/>
+                            <constraint firstItem="rzP-nn-MGw" firstAttribute="top" secondItem="UsZ-TY-xzs" secondAttribute="bottom" constant="20" id="al8-pf-RGa"/>
+                            <constraint firstItem="eHe-He-ZTr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dP4-Tq-z62"/>
+                            <constraint firstItem="G0O-zx-1c0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fRX-TW-Mhu"/>
+                            <constraint firstItem="UsZ-TY-xzs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qpw-j2-ZUB"/>
+                            <constraint firstItem="G0O-zx-1c0" firstAttribute="top" secondItem="5C8-Zz-mjP" secondAttribute="bottom" constant="20" id="uVT-nm-pnk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="businessEINNumberTextField" destination="eHe-He-ZTr" id="L9v-Gh-bc5"/>
+                        <outlet property="originalCardNumberTextField" destination="rzP-nn-MGw" id="vfb-Mj-bho"/>
+                        <outlet property="originalPhoneNumberTextField" destination="UsZ-TY-xzs" id="rcJ-rc-NJL"/>
+                        <outlet property="phoneNumberTextField" destination="5C8-Zz-mjP" id="hF2-Fb-0rV"/>
+                        <outlet property="ssnNumberTextField" destination="G0O-zx-1c0" id="C1r-fN-vN4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
