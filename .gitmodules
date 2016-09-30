@@ -1,0 +1,3 @@
+[submodule "Frameworks/CHRTextFieldFormatter"]
+	path = Frameworks/CHRTextFieldFormatter
+	url = git@github.com:RicardoBarroso/CHRTextFieldFormatter.git

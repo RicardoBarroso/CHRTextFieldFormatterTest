@@ -13,6 +13,10 @@
 		8CDB4C871D9ED62C00A50FE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB4C851D9ED62C00A50FE4 /* Main.storyboard */; };
 		8CDB4C891D9ED62C00A50FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB4C881D9ED62C00A50FE4 /* Assets.xcassets */; };
 		8CDB4C8C1D9ED62C00A50FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB4C8A1D9ED62C00A50FE4 /* LaunchScreen.storyboard */; };
+		8CDB4CD71D9ED89A00A50FE4 /* CHRCardNumberMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4C981D9ED89A00A50FE4 /* CHRCardNumberMask.m */; };
+		8CDB4CD81D9ED89A00A50FE4 /* CHRPhoneNumberMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4C9A1D9ED89A00A50FE4 /* CHRPhoneNumberMask.m */; };
+		8CDB4CD91D9ED89A00A50FE4 /* CHRTextFieldFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4C9C1D9ED89A00A50FE4 /* CHRTextFieldFormatter.m */; };
+		8CDB4CF11D9ED89A00A50FE4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB4CD41D9ED89A00A50FE4 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,15 @@
 		8CDB4C881D9ED62C00A50FE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CDB4C8B1D9ED62C00A50FE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CDB4C8D1D9ED62D00A50FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CDB4C971D9ED89A00A50FE4 /* CHRCardNumberMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRCardNumberMask.h; sourceTree = "<group>"; };
+		8CDB4C981D9ED89A00A50FE4 /* CHRCardNumberMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRCardNumberMask.m; sourceTree = "<group>"; };
+		8CDB4C991D9ED89A00A50FE4 /* CHRPhoneNumberMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRPhoneNumberMask.h; sourceTree = "<group>"; };
+		8CDB4C9A1D9ED89A00A50FE4 /* CHRPhoneNumberMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRPhoneNumberMask.m; sourceTree = "<group>"; };
+		8CDB4C9B1D9ED89A00A50FE4 /* CHRTextFieldFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRTextFieldFormatter.h; sourceTree = "<group>"; };
+		8CDB4C9C1D9ED89A00A50FE4 /* CHRTextFieldFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRTextFieldFormatter.m; sourceTree = "<group>"; };
+		8CDB4C9D1D9ED89A00A50FE4 /* CHRTextMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRTextMask.h; sourceTree = "<group>"; };
+		8CDB4CD41D9ED89A00A50FE4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		8CDB4CD51D9ED89A00A50FE4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +55,7 @@
 		8CDB4C701D9ED62C00A50FE4 = {
 			isa = PBXGroup;
 			children = (
+				8CDB4C931D9ED89A00A50FE4 /* Frameworks */,
 				8CDB4C7B1D9ED62C00A50FE4 /* CHRTextFieldFormatterTest */,
 				8CDB4C7A1D9ED62C00A50FE4 /* Products */,
 			);
@@ -77,6 +91,38 @@
 				8CDB4C7D1D9ED62C00A50FE4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CDB4C931D9ED89A00A50FE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CDB4C941D9ED89A00A50FE4 /* CHRTextFieldFormatter */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CDB4C941D9ED89A00A50FE4 /* CHRTextFieldFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				8CDB4C961D9ED89A00A50FE4 /* CHRTextFieldFormatter */,
+				8CDB4CD41D9ED89A00A50FE4 /* LICENSE */,
+				8CDB4CD51D9ED89A00A50FE4 /* README.md */,
+			);
+			path = CHRTextFieldFormatter;
+			sourceTree = "<group>";
+		};
+		8CDB4C961D9ED89A00A50FE4 /* CHRTextFieldFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				8CDB4C971D9ED89A00A50FE4 /* CHRCardNumberMask.h */,
+				8CDB4C981D9ED89A00A50FE4 /* CHRCardNumberMask.m */,
+				8CDB4C991D9ED89A00A50FE4 /* CHRPhoneNumberMask.h */,
+				8CDB4C9A1D9ED89A00A50FE4 /* CHRPhoneNumberMask.m */,
+				8CDB4C9B1D9ED89A00A50FE4 /* CHRTextFieldFormatter.h */,
+				8CDB4C9C1D9ED89A00A50FE4 /* CHRTextFieldFormatter.m */,
+				8CDB4C9D1D9ED89A00A50FE4 /* CHRTextMask.h */,
+			);
+			path = CHRTextFieldFormatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +187,7 @@
 				8CDB4C8C1D9ED62C00A50FE4 /* LaunchScreen.storyboard in Resources */,
 				8CDB4C891D9ED62C00A50FE4 /* Assets.xcassets in Resources */,
 				8CDB4C871D9ED62C00A50FE4 /* Main.storyboard in Resources */,
+				8CDB4CF11D9ED89A00A50FE4 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CDB4C841D9ED62C00A50FE4 /* ViewController.m in Sources */,
+				8CDB4CD81D9ED89A00A50FE4 /* CHRPhoneNumberMask.m in Sources */,
 				8CDB4C811D9ED62C00A50FE4 /* AppDelegate.m in Sources */,
+				8CDB4CD71D9ED89A00A50FE4 /* CHRCardNumberMask.m in Sources */,
+				8CDB4CD91D9ED89A00A50FE4 /* CHRTextFieldFormatter.m in Sources */,
 				8CDB4C7E1D9ED62C00A50FE4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +360,7 @@
 				8CDB4C921D9ED62D00A50FE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
