@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C17D6121DA3C306001343D4 /* CHRSSNNumberMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C17D6111DA3C306001343D4 /* CHRSSNNumberMask.m */; };
 		8CDB4C7E1D9ED62C00A50FE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4C7D1D9ED62C00A50FE4 /* main.m */; };
 		8CDB4C811D9ED62C00A50FE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4C801D9ED62C00A50FE4 /* AppDelegate.m */; };
 		8CDB4C841D9ED62C00A50FE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4C831D9ED62C00A50FE4 /* ViewController.m */; };
@@ -17,9 +18,12 @@
 		8CDB4CD81D9ED89A00A50FE4 /* CHRPhoneNumberMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4C9A1D9ED89A00A50FE4 /* CHRPhoneNumberMask.m */; };
 		8CDB4CD91D9ED89A00A50FE4 /* CHRTextFieldFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4C9C1D9ED89A00A50FE4 /* CHRTextFieldFormatter.m */; };
 		8CDB4CF11D9ED89A00A50FE4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8CDB4CD41D9ED89A00A50FE4 /* LICENSE */; };
+		8CDB4CFE1D9EE06800A50FE4 /* CHRBusinessEINNumberMask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDB4CFD1D9EE06800A50FE4 /* CHRBusinessEINNumberMask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C17D6101DA3C305001343D4 /* CHRSSNNumberMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRSSNNumberMask.h; sourceTree = "<group>"; };
+		8C17D6111DA3C306001343D4 /* CHRSSNNumberMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRSSNNumberMask.m; sourceTree = "<group>"; };
 		8CDB4C791D9ED62C00A50FE4 /* CHRTextFieldFormatterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CHRTextFieldFormatterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDB4C7D1D9ED62C00A50FE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CDB4C7F1D9ED62C00A50FE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +43,8 @@
 		8CDB4C9D1D9ED89A00A50FE4 /* CHRTextMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRTextMask.h; sourceTree = "<group>"; };
 		8CDB4CD41D9ED89A00A50FE4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8CDB4CD51D9ED89A00A50FE4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8CDB4CFC1D9EE06800A50FE4 /* CHRBusinessEINNumberMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRBusinessEINNumberMask.h; sourceTree = "<group>"; };
+		8CDB4CFD1D9EE06800A50FE4 /* CHRBusinessEINNumberMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRBusinessEINNumberMask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +120,14 @@
 		8CDB4C961D9ED89A00A50FE4 /* CHRTextFieldFormatter */ = {
 			isa = PBXGroup;
 			children = (
+				8CDB4CFC1D9EE06800A50FE4 /* CHRBusinessEINNumberMask.h */,
+				8CDB4CFD1D9EE06800A50FE4 /* CHRBusinessEINNumberMask.m */,
 				8CDB4C971D9ED89A00A50FE4 /* CHRCardNumberMask.h */,
 				8CDB4C981D9ED89A00A50FE4 /* CHRCardNumberMask.m */,
 				8CDB4C991D9ED89A00A50FE4 /* CHRPhoneNumberMask.h */,
 				8CDB4C9A1D9ED89A00A50FE4 /* CHRPhoneNumberMask.m */,
+				8C17D6101DA3C305001343D4 /* CHRSSNNumberMask.h */,
+				8C17D6111DA3C306001343D4 /* CHRSSNNumberMask.m */,
 				8CDB4C9B1D9ED89A00A50FE4 /* CHRTextFieldFormatter.h */,
 				8CDB4C9C1D9ED89A00A50FE4 /* CHRTextFieldFormatter.m */,
 				8CDB4C9D1D9ED89A00A50FE4 /* CHRTextMask.h */,
@@ -201,6 +211,8 @@
 				8CDB4C841D9ED62C00A50FE4 /* ViewController.m in Sources */,
 				8CDB4CD81D9ED89A00A50FE4 /* CHRPhoneNumberMask.m in Sources */,
 				8CDB4C811D9ED62C00A50FE4 /* AppDelegate.m in Sources */,
+				8C17D6121DA3C306001343D4 /* CHRSSNNumberMask.m in Sources */,
+				8CDB4CFE1D9EE06800A50FE4 /* CHRBusinessEINNumberMask.m in Sources */,
 				8CDB4CD71D9ED89A00A50FE4 /* CHRCardNumberMask.m in Sources */,
 				8CDB4CD91D9ED89A00A50FE4 /* CHRTextFieldFormatter.m in Sources */,
 				8CDB4C7E1D9ED62C00A50FE4 /* main.m in Sources */,
