@@ -10,7 +10,7 @@
 #import "CHRBusinessEINNumberMask.h"
 #import "CHRCardNumberMask.h"
 #import "CHRPhoneNumberMask.h"
-#import "CHRTextFieldFormatter.h"
+#import "CHRSSNNumberMask.h"
 #import "CHRTextFieldFormatter.h"
 
 @interface ViewController ()
@@ -23,6 +23,8 @@
 @property (nonatomic, strong) CHRTextFieldFormatter *originalPhoneNumberFormatter;
 @property (nonatomic, strong) CHRTextFieldFormatter *originalCardNumberFormatter;
 @property (nonatomic, strong) CHRTextFieldFormatter *businessEINNumberFormatter;
+@property (nonatomic, strong) CHRTextFieldFormatter *phoneNumberFormatter;
+@property (nonatomic, strong) CHRTextFieldFormatter *ssnNumberFormatter;
 @end
 
 @implementation ViewController
@@ -33,12 +35,18 @@
     self.originalPhoneNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.originalPhoneNumberTextField mask:[CHRPhoneNumberMask new]];
     self.originalCardNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.originalCardNumberTextField mask:[CHRCardNumberMask new]];
     self.businessEINNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.businessEINNumberTextField mask:[CHRBusinessEINNumberMask new]];
+    self.phoneNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.phoneNumberTextField mask:[CHRPhoneNumberMask new]];
+    self.ssnNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.ssnNumberTextField mask:[CHRSSNNumberMask new]];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if (textField == self.businessEINNumberTextField) {
         return [self.businessEINNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
     } else if (textField == self.phoneNumberTextField) {
+        return [self.phoneNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
+    } else if (textField == self.ssnNumberTextField) {
+        return [self.ssnNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
+    } else if (textField == self.originalPhoneNumberTextField) {
         return [self.originalPhoneNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
     } else if (textField == self.originalCardNumberTextField) {
         return [self.originalCardNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
