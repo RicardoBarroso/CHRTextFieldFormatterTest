@@ -12,6 +12,7 @@
 #import "CHRPhoneNumberMask.h"
 #import "CHRSSNNumberMask.h"
 #import "CHRTextFieldFormatter.h"
+#import "CHRUSPhoneNumberMask.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) IBOutlet UITextField *originalPhoneNumberTextField;
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) CHRTextFieldFormatter *businessEINNumberFormatter;
 @property (nonatomic, strong) CHRTextFieldFormatter *phoneNumberFormatter;
 @property (nonatomic, strong) CHRTextFieldFormatter *ssnNumberFormatter;
+@property (nonatomic, strong) CHRTextFieldFormatter *usPhoneNumberFormatter;
 @end
 
 @implementation ViewController
@@ -37,13 +39,14 @@
     self.businessEINNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.businessEINNumberTextField mask:[CHRBusinessEINNumberMask new]];
     self.phoneNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.phoneNumberTextField mask:[CHRPhoneNumberMask new]];
     self.ssnNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.ssnNumberTextField mask:[CHRSSNNumberMask new]];
+    self.usPhoneNumberFormatter = [[CHRTextFieldFormatter alloc] initWithTextField:self.phoneNumberTextField mask:[CHRUSPhoneNumberMask new]];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if (textField == self.businessEINNumberTextField) {
         return [self.businessEINNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
     } else if (textField == self.phoneNumberTextField) {
-        return [self.phoneNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
+        return [self.usPhoneNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
     } else if (textField == self.ssnNumberTextField) {
         return [self.ssnNumberFormatter textField:textField shouldChangeCharactersInRange:range replacementString:string];
     } else if (textField == self.originalPhoneNumberTextField) {
